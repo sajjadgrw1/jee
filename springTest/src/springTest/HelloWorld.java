@@ -1,5 +1,5 @@
 package springTest;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HelloWorld {
@@ -28,9 +28,11 @@ public class HelloWorld {
 	
 	public static void main (String args[])
 	{
-		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
-		HelloWorld hello = (HelloWorld) context.getBean("helloWorld");
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 		
+		HelloWorld hello = (HelloWorld) context.getBean("helloWorld");
+		context.start();
+		context.stop();
 		System.out.println(hello.getHello());
 
 	}

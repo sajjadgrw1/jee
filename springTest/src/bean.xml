@@ -7,7 +7,12 @@
     <bean id="helloWorld" class="springTest.HelloWorld" init-method="init" destroy-method="destroy" >
     	<property name="hello" value="hello world !!" ></property>
     </bean>
+ 
+ 	<bean id="startEvent" class="springTest.StartEventHandler" ></bean>
+ 	<bean id="stopEvent" class="springTest.StopEventHandler" ></bean>
     
-    <bean id="postProcessor" class="springTest.HelloWorldPostProcessorDemo"  ></bean>
-    
+<!--     <bean id="postProcessor" class="springTest.HelloWorldPostProcessorDemo"  ></bean>
+ -->    
+ 
+ 
 </beans>
