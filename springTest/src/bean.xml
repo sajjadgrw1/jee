@@ -8,9 +8,17 @@
     	<property name="hello" value="hello world !!" ></property>
     </bean>
  
- 	<bean id="startEvent" class="springTest.StartEventHandler" ></bean>
+ 
+    <bean id="customEventHandler" 
+      class="springTest.CustomeEventHandler"/>
+
+   <bean id="customEventPublisher" 
+      class="springTest.CustomeEventPublisher"/>
+ 
+ 
+ 	<!-- <bean id="startEvent" class="springTest.StartEventHandler" ></bean>
  	<bean id="stopEvent" class="springTest.StopEventHandler" ></bean>
-    
+     -->
 <!--     <bean id="postProcessor" class="springTest.HelloWorldPostProcessorDemo"  ></bean>
  -->    
  

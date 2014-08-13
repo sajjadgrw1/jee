@@ -30,10 +30,8 @@ public class HelloWorld {
 	{
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 		
-		HelloWorld hello = (HelloWorld) context.getBean("helloWorld");
-		context.start();
-		context.stop();
-		System.out.println(hello.getHello());
+		 CustomeEventPublisher cvp = (CustomeEventPublisher) context.getBean("customEventPublisher");
+		 cvp.publish();
 
 	}
 	
